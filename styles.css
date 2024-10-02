@@ -1,0 +1,162 @@
+/* General body styles */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #fff;
+    background-color: black; /* Set a default background color */
+}
+
+/* Galaxy background animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Ensure this is behind stars and container */
+    background-color: black; /* Fallback color */
+}
+
+/* Starry background */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interaction with stars */
+    z-index: -1; /* Ensure stars are in front of the background */
+}
+
+/* Twinkling stars */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite alternate;
+    opacity: 0.5;
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* Happy background animation when correct */
+.happy-background {
+    background: linear-gradient(135deg, #ffcc00, #ff6699, #66ccff);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Gradient animation for happy background */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Game container styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Center vertically */
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto; /* Center horizontally */
+    background-color: rgba(0, 0, 50, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s;
+    z-index: 1; /* Ensure the container is above everything */
+}
+
+/* Title styling */
+h1 {
+    color: #ffd700;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: bounce 3s infinite;
+}
+
+/* Score display */
+#score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Different color for score */
+}
+
+/* Clue box styling */
+.clue-box {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Choices button styles */
+.choices button {
+    background-color: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 1s;
+}
+
+.choices button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Next and Retry button styling */
+.next-btn {
+    background-color: #ff6b6b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+/* Feedback text */
+#feedback {
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Emoji styling */
+.emoji {
+    position: fixed;
+    font-size: 3em;
+    animation: fadeIn 1s;
+    z-index: 10;
+}

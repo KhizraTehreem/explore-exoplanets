@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Explorer Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="stars"></div>
+    <div class="game-container">
+        <h1>Exoplanet Explorer</h1>
+        <div id="score">Score: 0</div>
+        <div id="clue" class="clue-box"></div>
+        <div id="choices" class="choices"></div>
+        <div id="feedback"></div>
+        <button id="nextBtn" class="next-btn" onclick="nextPlanet()">Next</button>
+        <button id="retryBtn" class="next-btn" onclick="retryGame()" style="display: none;">Retry</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
